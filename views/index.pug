@@ -1,0 +1,22 @@
+extend ../public/include/layout
+block css
+    link(rel='stylesheet',href='/public/css/custom.css')
+block js
+    script(src='/public/js/custom.js')
+block content
+    .container
+        ul.type_list.clearfix
+            li
+                a(class='active',href='/') cnode
+            li
+                a(href='/zhihu') 知乎
+        ul.info_list.cnode
+            each item,index in list
+                li.cell.clearfix
+                    img(src=`${item.userImg}`)
+                    .info_detail 
+                        a(href='javascript:void(0)') #{item.title}
+                        .count
+                            span 回复数：#{item.replyCount}
+                            span 点击数：#{item.visitCount}
+                        
