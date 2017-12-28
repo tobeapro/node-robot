@@ -1,0 +1,21 @@
+extend ../public/include/layout
+block css
+    link(rel='stylesheet',href='/public/css/custom.css')
+block js
+    script(src='/public/js/zhihu.js')
+block content
+    .container
+        ul.type_list.clearfix
+            li
+                a(href='/') cnode
+            li
+                a(class='active',href='/zhihu') 知乎
+        ul.zhihu.clearfix
+            each item,index in zhihuList
+                li.cell.fl
+                    a(href=`/zhihu/${item.id}`) 
+                        img(src=`/public/img/${item.id}.png`,data-src=`/public/img/${item.id}.png`,onerror="loadImg(this)",alt=`${item.title}`)
+                        .info_detail
+                            p.title #{item.title}
+                            
+                        

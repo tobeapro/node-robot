@@ -11,11 +11,11 @@ block content
             li
                 a(href='/zhihu') 知乎
         ul.info_list.cnode
-            each item,index in list
+            each item,index in cnodeList
                 li.cell.clearfix
                     img(src=`${item.userImg}`)
                     .info_detail 
-                        a(href='javascript:void(0)') #{item.title}
+                        a(href=`/cnode${item.id}`) #{item.title}
                         .count
                             span 回复数：#{item.replyCount}
                             span 点击数：#{item.visitCount}
