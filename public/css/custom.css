@@ -1,7 +1,12 @@
+body{
+    background:#ddd;
+}
 .container{
-    margin:0 auto;
+    margin:10px auto 0;
     max-width:1200px; 
-    min-width:800px;  
+    min-width:800px; 
+    background:#fff; 
+    border-radius:6px;
 }
 .type_list{
     padding:10px 0;
@@ -31,7 +36,8 @@
 }
 .info_list .cell{
     padding:10px 0;
-    border:1px solid #e2e2e2;
+    border-top:1px solid #e2e2e2;
+    border-bottom:1px solid #e2e2e2;
 }
 .info_list .cell:not(:last-child){
     border-bottom:none;
@@ -43,20 +49,37 @@
     height:48px;
     border-radius: 4px;
 }
-.info_detail{
+.info_list .info_detail{
     float: left;
 }
-.info_detail a{
+.info_list .info_detail a{
     display:inline-block;
     height:28px;
     line-height:28px;
     font-size:14px;
     color:#666;
 }
-.info_detail a:hover{
+.info_list .info_detail a:hover{
     color: #222;
     text-decoration: underline;
 }
-.info_detail .count{
+.info_list .info_detail .count{
     line-height:20px;
+}
+.info_list .info_detail p.title{
+    line-height:48px;
+}
+.zhihu{
+    background:#ddd;
+}
+.zhihu .cell a{
+    float:left;
+    margin:10px 20px;
+    width:400px;
+    text-align: center;
+    background:#fff;
+}
+.zhihu .cell img{
+    width:150px;
+    height:150px;
 }
