@@ -43,6 +43,9 @@ app.get('/zhihu',(req,res)=>{
         }           
         let zhihuList=[]
         data=data.body.stories
+        if (!fs.existsSync(__dirname + '/public/img')){
+            fs.mkdirSync(__dirname + '/public/img')
+        }
         data.forEach((item,index)=>{
             http.get(item.images[0])
             .set({'async':false})
