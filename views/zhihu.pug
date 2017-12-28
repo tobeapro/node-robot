@@ -1,5 +1,6 @@
 extend ../public/include/layout
 block css
+    link(rel='icon',href='/public/icon/zhihu.png')
     link(rel='stylesheet',href='/public/css/custom.css')
 block js
     script(src='/public/js/zhihu.js')
@@ -9,13 +10,13 @@ block content
             li
                 a(href='/') cnode
             li
-                a(class='active',href='/zhihu') 知乎
+                a(class='active',href='/zhihu') 知乎日报
         ul.zhihu.clearfix
             each item,index in zhihuList
                 li.cell.fl
                     a(href=`/zhihu/${item.id}`) 
                         img(src=`/public/img/${item.id}.png`,data-src=`/public/img/${item.id}.png`,onerror="loadImg(this)",alt=`${item.title}`)
-                        .info_detail
-                            p.title #{item.title}
+                        .info_detail 
+                            .title #{item.title}
                             
                         

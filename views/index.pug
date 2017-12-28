@@ -1,15 +1,16 @@
 extend ../public/include/layout
 block css
+    link(rel='icon',href='/public/icon/nodejs.png')
     link(rel='stylesheet',href='/public/css/custom.css')
 block js
     script(src='/public/js/custom.js')
-block content
+block content      
     .container
         ul.type_list.clearfix
             li
                 a(class='active',href='/') cnode
             li
-                a(href='/zhihu') 知乎
+                a(href='/zhihu') 知乎日报
         ul.info_list.cnode
             each item,index in cnodeList
                 li.cell.clearfix
@@ -19,4 +20,4 @@ block content
                         .count
                             span 回复数：#{item.replyCount}
                             span 点击数：#{item.visitCount}
-                        
+                            
