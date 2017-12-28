@@ -2,14 +2,16 @@ body{
     background:#ddd;
 }
 .container{
-    margin:10px auto 0;
+    margin:0 auto;
     max-width:1200px; 
     min-width:800px; 
-    background:#fff; 
-    border-radius:6px;
+    
 }
 .type_list{
+    margin-top:10px;
     padding:10px 0;
+    background:#fff;
+    border-radius:6px;
 }
 .type_list li{
     float:left;
@@ -33,6 +35,11 @@ body{
 .type_list li a.active{
     color:#fff;
     background:#000;
+}
+.info_list{
+    margin-top:10px;
+    background:#fff;
+    border-radius:6px;
 }
 .info_list .cell{
     padding:10px 0;
@@ -69,17 +76,42 @@ body{
 .info_list .info_detail p.title{
     line-height:48px;
 }
-.zhihu{
-    background:#ddd;
+.zhihu .cell{
+    width:25%;
+    margin-top:10px;
+    text-align:center;
+}
+@media screen and (max-width:1000px){
+    .zhihu .cell{
+        width:33.3%;
+    }
 }
 .zhihu .cell a{
     float:left;
-    margin:10px 20px;
-    width:400px;
+    padding:20px 20px 0;
+    width:240px;
     text-align: center;
+    color:#666;
+    font-weight:bold;
     background:#fff;
+    border-radius:10px;
+}
+.zhihu .cell a:hover{
+    color:#000;
 }
 .zhihu .cell img{
-    width:150px;
-    height:150px;
+    width:200px;
+    height:200px;
+}
+.zhihu .info_detail{
+    display:flex;
+    align-items:center;
+    height:60px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    text-align:left;
+    text-indent:2em;
+}
+.zhihu .info_detail .title{
+    line-height:20px;
 }
