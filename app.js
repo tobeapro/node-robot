@@ -10,7 +10,7 @@ app.set('view engine','pug')
 app.use('/static',express.static(__dirname+'/node_modules'))
 app.use('/public', express.static(__dirname + '/public'))
 app.use(bodyParser.urlencoded({extend:true})) //post请求参数解析
-app.get('/',(req,res)=>{
+app.get('/',(req,res,next)=>{
     http.get('https://cnodejs.org/')
     .end((err,data)=>{
         if(err){
@@ -35,7 +35,7 @@ app.get('/',(req,res)=>{
         })
     })
 })
-app.get('/zhihu',(req,res)=>{
+app.get('/zhihu',(req,res,next)=>{
     http.get('https://news-at.zhihu.com/api/4/news/latest')
     .end((err,data)=>{
         if(err){
